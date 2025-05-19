@@ -1,0 +1,77 @@
+@use "assets/reset.css";
+@use "assets/_vars.scss";
+@use "slick-carousel/slick/slick.css";
+@use "slick-carousel/slick/slick-theme.css";
+@use "assets/fonts.css";
+/*ELEMENTS*/
+@use "assets/elements/header";
+@use "assets/elements/footer";
+@use "assets/elements/servicesCard";
+@use "assets/elements/whySlider";
+@use "assets/elements/portfolioCard";
+@use "assets/elements/specialistsGalleryCard";
+@use "assets/elements/informationCard";
+@use "assets/elements/burger";
+/*SECTIONS*/
+@use "assets/sections/hero";
+@use "assets/sections/services";
+@use "assets/sections/why";
+@use "assets/sections/portfolio";
+@use "assets/sections/specialists";
+@use "assets/sections/information";
+
+body {
+    background: #FFF9F7;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fbf5f3;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f4d4d9;
+    border-radius: 10px;
+    border: 3px solid #f4d4d9;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+* {
+    scroll-behavior: smooth;
+    scroll-margin: vars.$header_height;
+    font-family:  'Inter 18pt', Arial, sans-serif !important;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+@media (min-width: 640px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 85%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: 80%;
+        max-width: 1900px;
+    }
+}
+
+

@@ -1,0 +1,25 @@
+.img-wrapper {
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    width: 90%;
+    margin: auto;
+}
+
+.img-wrapper:hover {
+    transform: translateY(-5px);
+}
+
+
+.certificate-img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+@media (max-width: 640px) {
+    .why-slider-container {
+        max-height: 670px;
+    }
+}

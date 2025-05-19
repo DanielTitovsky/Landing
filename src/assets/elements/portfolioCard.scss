@@ -1,0 +1,234 @@
+@use "@/assets/_vars.scss";
+
+.portfolio-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 75%;
+    gap: 20px
+}
+
+.portfolio-card {
+    display: flex;
+    background: vars.$bg-main-color;
+    padding: 35px 35px 0 0;
+    border-radius: 20px;
+    box-shadow: 0 0 12px rgb(243 232 221);
+
+    &_img-wrapper {
+        width: 400px;
+        height: 350px;
+    }
+
+    &_img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: drop-shadow(0 0 20px rgba(216, 172, 172, 0.3));
+    }
+
+    &_content {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    &_text {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &_title {
+        font-size: vars.$text-font-size-large;
+        color: vars.$text-accent-color;
+    }
+
+    &_description {
+        font-size: vars.$text-font-size-small;
+        color: vars.$text-main-color;
+    }
+
+    &_description br {
+        display: block;
+        content: "";
+        margin-bottom: 10px;
+    }
+
+    &_information {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    &_composition {
+        color: vars.$text-main-color;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        min-height: 100%;
+        font-size: vars.$text-font-size-small;
+    }
+
+
+    &_notes {
+        list-style-type: disc;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        padding-left: 25px;
+        gap: 7px;
+    }
+
+    &_pricing {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+    }
+
+    &_volume {
+        font-size: vars.$text-font-size-medium;
+        color: vars.$text-main-color;
+    }
+
+    &_price {
+        font-size: vars.$text-font-size-medium;
+        color: vars.$text-main-color;
+    }
+
+    &_buy-now {
+        display: flex;
+        justify-content: center;
+        width: 200px;
+        padding: 15px 20px;
+        font-size: vars.$text-font-size-medium;
+        background: vars.$btn-main-bg-color;
+        color: vars.$text-main-btn;
+        border: none;
+        border-radius: 30px;
+        transition: 0.5s;
+    }
+
+    &_buy-now:hover {
+        background: #f9ced5;
+        color: #2A2A2A;
+    }
+}
+.portfolio-card_note::marker {
+    color: vars.$text-accent-color;
+}
+
+@media (max-width: 1400px) {
+    .portfolio-card-wrapper {
+        width: 100%;
+    }
+}
+
+@media (max-width: 991px) {
+    .portfolio-card-wrapper {
+
+    }
+
+    .portfolio-card {
+        padding: 35px 35px 0 10px;
+        gap: 20px;
+
+        &_img-wrapper {
+            width: 300px;
+            height: 300px;
+        }
+
+        &_content {
+            gap: 30px;
+        }
+
+        &_title {
+            font-size: vars.$text-font-size-big;
+        }
+
+        &_description {
+            font-size: vars.$text-font-size-light;
+        }
+
+        &_notes {
+            font-size: vars.$text-font-size-light;
+        }
+
+        &_pricing {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
+            padding-bottom: 18px;
+        }
+
+        &_volume {
+            font-size: 20px;
+        }
+
+        &_price {
+            font-size: 20px;
+        }
+
+        &_buy-now {
+            width: 150px;
+            padding: 15px 15px;
+            font-size: vars.$text-font-size-small;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+
+    .portfolio-card-wrapper {
+        align-items: center;
+    }
+
+    .portfolio-card {
+        align-items: center;
+        flex-direction: column;
+        width: 80%;
+        gap: 0;
+        padding: 0 20px 0 20px;
+
+        &_img-wrapper {
+            width: 250px;
+        }
+
+        &_content {
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        &_text {
+            gap: 20px;
+            align-items: center;
+            text-align: center;
+        }
+
+        &_description {
+            font-size: vars.$text-font-size-xlight;
+        }
+
+        &_information {
+            align-items: flex-end;
+        }
+
+        &_composition {
+            flex-direction: column;
+        }
+
+        &_pricing {
+            padding-bottom: 18px;
+        }
+
+        &_notes {
+            font-size: vars.$text-font-size-small;
+        }
+
+        &_buy-now {
+            margin: 0 6% 0 auto;
+        }
+    }
+}

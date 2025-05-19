@@ -1,0 +1,67 @@
+@use "@/assets/_vars.scss";
+
+.specialists {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  padding: 50px 0 0 0;
+  gap: 50px;
+  background: linear-gradient(to bottom, #FFF9F7, #FDF3EF);
+
+  &_header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &_title {
+    font-size: vars.$text-font-size-large;
+    color: vars.$text-main-color;
+    font-weight: bold;
+  }
+
+  &_subtitle {
+    font-size: vars.$text-font-size-medium;
+    color: vars.$text-second-color;;
+  }
+
+  &_gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+  }
+}
+
+@media (max-width: 991px) {
+  .specialists {
+
+    &_gallery {
+      grid-template-columns: repeat(2, 1fr);
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .specialists {
+
+    &_gallery {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .specialists {
+
+    &_title {
+      font-size: vars.$text-font-size-big;
+    }
+
+    &_subtitle {
+      font-size: vars.$text-font-size-small;
+      padding: 0 45px 0 45px;
+    }
+  }
+}

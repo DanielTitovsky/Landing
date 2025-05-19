@@ -1,0 +1,80 @@
+@use "@/assets/_vars.scss";
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    &_header {
+        width: 350px;
+
+        &_img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+    }
+
+    &_content {
+        display: flex;
+        flex-direction: column;
+        width: 310px;
+        height: 100%;
+        background: vars.$bg-main-color;
+        border-radius: 10px;
+        margin-top: -40px;
+        padding: 20px 10px;
+        gap: 15px;
+        box-shadow: 0px 8px 20px 0px vars.$shadow-card-color, 0px 5px 6px 0px vars.$shadow-card-color;
+    }
+
+    &_title {
+        color: vars.$text-main-color;
+        font-size: vars.$text-font-size-medium;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    &_details {
+        display: flex;
+        flex-direction: column;
+        list-style-type: disc;
+        color: vars.$text-main-color;
+        padding-left: 2em;
+        gap: 10px;
+    }
+
+    &_detail {
+        font-size: 18px;
+        color: vars.$text-second-color;
+    }
+}
+
+.card_detail::marker {
+    color: vars.$text-accent-color;
+    font-size: 1.5em;
+}
+
+
+@media (max-width: 640px) {
+    .card {
+
+        &_header {
+            width: 300px;
+        }
+
+        &_content {
+            width: 250px;
+        }
+
+        &_title {
+            font-size: vars.$text-font-size-small;
+        }
+
+        &_detail {
+            font-size: vars.$text-font-size-light;
+            color: vars.$text-second-color;
+        }
+    }
+}

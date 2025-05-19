@@ -1,0 +1,125 @@
+@use "@/assets/_vars.scss";
+
+.hero {
+    height: calc(100vh - (vars.$header_height));
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(to bottom, #ffffff, #FDF3EF);
+    box-shadow: inset 0 -20px 30px -20px rgba(0, 0, 0, 0.03);
+
+    &_img-wrapper {
+        position: relative;
+        width: 45vw;
+        max-width: 800px;
+    }
+
+    &_img-wrapper:before{
+        content: "";
+        mask-image: url("/asdf.svg");
+        mask-repeat: no-repeat;
+        position: absolute;
+        background: #F6D5DA;
+        mask-size: 100% 100%;
+        width: 100%;
+        height: 110%;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    &_img {
+        position: relative;
+        width: 100%;
+        filter: drop-shadow(0 0 3px rgba(100, 0, 0, 0.5));
+        z-index: 1;
+    }
+
+
+    &-container {
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+
+.promo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    &_title {
+        font-size: vars.$text-font-size-xlarge;
+        color: vars.$text-main-color;
+        font-weight: bold;
+    }
+    //TODO::Вынести в переменную
+    &_title-accent {
+        color: #f3c0c8;
+    }
+
+    &_itle-description {
+        font-size: vars.$text-font-size-big;
+        color: vars.$text-second-color;
+    }
+
+    &_button {
+        background: vars.$btn-main-bg-color;
+        color: vars.$text-main-color;
+        font-size: vars.$text-font-size-medium;
+        text-decoration: none;
+        padding: 20px 40px;
+        width: 150px;
+        border-radius: 30px;
+        transition: 0.5s;
+    }
+
+    &_button:hover {
+        background: #f9ced5;
+        color: #2A2A2A;
+    }
+}
+
+
+
+@media (max-width: 991px) {
+    .hero-container {
+        justify-content: space-evenly;
+    }
+
+    .hero {
+
+        &_img-wrapper {
+            max-width: 400px;
+        }
+    }
+
+    .promo-text {
+
+        &_title {
+            font-size: vars.$text-font-size-large;
+        }
+
+        &_itle-description {
+            font-size: vars.$text-font-size-small;
+            color: vars.$text-second-color;
+            margin-bottom: 20px;
+        }
+
+        &_button {
+            font-size: vars.$text-font-size-small;
+            padding: 15px 35px;
+            width: 100px;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .hero {
+        &_img-wrapper {
+            display: none;
+        }
+    }
+}

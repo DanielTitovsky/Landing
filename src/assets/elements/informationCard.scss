@@ -1,0 +1,67 @@
+@use "@/assets/_vars.scss";
+
+.information-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 10px;
+  gap: 25px;
+  padding: 55px 20px 40px 20px;
+  background: vars.$bg-main-color;
+  box-shadow: 0 0 12px rgb(250 214 179 / 30%);
+
+  &_number-star {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: vars.$bg-main-color;
+    border: 1px solid #E8D5D2;
+    position: absolute;
+    transform:translate(-50%, -0%);
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    top: -19%;
+    left:50%;
+
+    &_number {
+      font-size: vars.$text-font-size-medium;
+    }
+  }
+
+  &_title {
+    font-size: vars.$text-font-size-big;
+    color: vars.$text-main-color;
+    font-weight: bold;
+  }
+
+  &_paragraph-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &_paragraph {
+    font-size: vars.$text-font-size-small;
+    color: vars.$text-second-color;
+  }
+}
+
+@media (max-width: 1400px) {
+  .information-card {
+    padding: 55px 20px 30px 20px;
+    width: 80%;
+
+  }
+}
+
+@media (max-width: 768px) {
+  .information-card {
+    width: 100%;
+
+    &_title {
+      font-size: vars.$text-font-size-medium;
+    }
+  }
+}
+

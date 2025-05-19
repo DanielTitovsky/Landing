@@ -1,0 +1,47 @@
+@use "@/assets/_vars.scss";
+
+.services {
+    padding: 70px 0 100px 0;
+    background: #f7efe8;
+    overflow: hidden;
+    position: relative;
+
+    &_title {
+        text-align: center;
+        font-size: vars.$text-font-size-large;
+        color: vars.$text-main-color;
+        font-weight: bold;
+        margin-bottom: 35px;
+    }
+}
+
+.cards-block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+    align-items: stretch;
+    justify-items: center;
+    row-gap: 75px;
+    z-index: 5;
+}
+
+@media (max-width: 1400px) {
+    .cards-block {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 991px) {
+    .cards-block {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .services {
+
+        &_title {
+            font-size: vars.$text-font-size-big;
+        }
+    }
+}

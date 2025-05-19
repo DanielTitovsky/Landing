@@ -1,0 +1,75 @@
+@use "@/assets/_vars.scss";
+
+.specialists-gallery_card {
+  position: relative;
+  max-width: 100%;
+
+  &_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    filter: brightness(0.85);
+  }
+
+  &_content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    padding: 12px 2%;
+    background: rgb(255 255 255 / 90%);
+    gap: 10px;
+    height: 85px;
+  }
+
+  &_name {
+    font-size: vars.$text-font-size-medium;
+    color: vars.$text-main-color;
+  }
+
+  &_status {
+    font-size: vars.$text-font-size-light;
+    color: vars.$text-second-color;
+  }
+}
+
+@media (max-width: 991px) {
+  .specialists-gallery_card {
+
+    &_content {
+      padding: 12px 2%;
+      background: rgb(255 255 255 / 90%);
+      gap: 10px;
+      height: 85px;
+    }
+
+    &_name {
+      font-size: vars.$text-font-size-medium;
+      color: vars.$text-main-color;
+    }
+
+    &_status {
+      font-size: vars.$text-font-size-light;
+      color: vars.$text-second-color;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .specialists-gallery_card {
+    max-height: 800px;
+  }
+}
+
+@media (max-width: 640px) {
+  .specialists-gallery_card {
+
+    &_name {
+      font-size: vars.$text-font-size-big;
+    }
+
+    &_status {
+      font-size: vars.$text-font-size-small;
+    }
+  }
+}

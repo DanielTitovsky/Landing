@@ -1,0 +1,37 @@
+@use "@/assets/_vars.scss";
+.why {
+    text-align: center;
+    padding: 65px 0;
+    background: vars.$bg-main-color;
+
+    &_header {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin-bottom: 50px;
+    }
+
+    &_title {
+        font-size: vars.$text-font-size-large;
+        color: vars.$text-main-color;
+        font-weight: bold;
+    }
+
+    &_subtitle {
+        font-size: vars.$text-font-size-medium;
+        color: vars.$text-second-color;
+    }
+}
+
+@media (max-width: 640px) {
+    .why {
+
+        &_title {
+            font-size: vars.$text-font-size-big;
+        }
+
+        &_subtitle {
+            font-size: vars.$text-font-size-small;
+        }
+    }
+}
